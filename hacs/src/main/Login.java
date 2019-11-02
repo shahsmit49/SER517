@@ -94,12 +94,12 @@ public class Login extends JDialog {
 			{
 				userType = USER_TYPE.Student; /// 0 for student
 				String userHome = System.getProperty("user.home");
-				file = new BufferedReader(new FileReader(userHome+"/git/SER517/hacs/src/main/StuInfo.txt"));
+				file = new BufferedReader(new FileReader(userHome+"/hacs/src/main/StuInfo.txt"));
 			} else// instructor
 			{
 				userType = USER_TYPE.Instructor; // 1 for instructor
 				String userHome = System.getProperty("user.home");
-				file = new BufferedReader(new FileReader(userHome+"/git/SER517/hacs/src/main/InsInfor.txt"));
+				file = new BufferedReader(new FileReader(userHome+"/hacs/src/main/InsInfor.txt"));
 			}
 			userBox = userNameText.getText();
 			String PasswordBox = new String(passwordText.getPassword());

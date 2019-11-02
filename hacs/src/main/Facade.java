@@ -135,7 +135,7 @@ public class Facade {
 		BufferedReader file;
 		try {
 			String userHome = System.getProperty("user.home");
-			file = new BufferedReader(new FileReader(userHome+"/git/SER517/hacs/src/main/UserCourse.txt"));
+			file = new BufferedReader(new FileReader(userHome+"/hacs/src/main/UserCourse.txt"));
 			String aline, strUserName, strCourseName;
 			while ((aline = file.readLine()) != null) // not the EOF
 			{
