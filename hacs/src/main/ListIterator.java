@@ -12,18 +12,20 @@ import java.util.*;
  */
 
 public class ListIterator implements Iterator<Object> {
-	ArrayList<Object> theList;
-	int CurrentNumber = -1;
+	public ArrayList<Object> theList;
+	public int currentNumber;
 
 	public ListIterator() {
+		currentNumber--;
 	}
 
 	public ListIterator(ArrayList<Object> list) {
 		theList = list;
+		currentNumber--;
 	}
 
 	public boolean hasNext() {
-		if (CurrentNumber >= theList.size() - 1)
+		if (currentNumber >= theList.size() - 1)
 			return false;
 		else
 			return true;
@@ -31,14 +33,14 @@ public class ListIterator implements Iterator<Object> {
 
 	public Object next() {
 		if (hasNext() == true) {
-			CurrentNumber++;
-			return theList.get(CurrentNumber);
+			currentNumber++;
+			return theList.get(currentNumber);
 		} else {
 			return null;
 		}
 	}
 
 	public void remove() {
-		theList.remove(CurrentNumber);
+		theList.remove(currentNumber);
 	}
 }

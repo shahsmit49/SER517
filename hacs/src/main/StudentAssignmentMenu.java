@@ -100,7 +100,7 @@ public class StudentAssignmentMenu extends AssignmentMenu {
 	public void ShowMenu(Assignment assignment, Person thePerson) {
 		theAssignment = assignment;
 		SolutionIterator theIter = theAssignment.getSolutionIterator();
-		theSolution = (Solution) theIter.next(thePerson.UserName);
+		theSolution = (Solution) theIter.next(thePerson.userName);
 		if (theSolution == null) {
 			tbSolution.setText("");
 			lGrade.setText("-1");
@@ -121,7 +121,7 @@ public class StudentAssignmentMenu extends AssignmentMenu {
 				theSolution = new Solution();
 				theAssignment.addSolution(theSolution);
 			}
-			theSolution.theAuthor = thePerson.UserName;
+			theSolution.theAuthor = thePerson.userName;
 			theSolution.SolutionFileName = tbSolution.getText();
 			theSolution.theSubmitData = new Date();
 		}

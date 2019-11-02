@@ -94,7 +94,7 @@ class TestFacade {
 		infoItem.strUserName = "Smit";
 		infoItem.UserType = USER_TYPE.Student;
 		facade.createUser(infoItem);
-		assertEquals("Smit", facade.thePerson.UserName);
+		assertEquals("Smit", facade.thePerson.userName);
 	}
 
 	/**
@@ -112,10 +112,10 @@ class TestFacade {
 	@Test
 	void testAttachCourseToUser() {
 		Person person = new Instructor();
-		person.UserName = "Inst1";
+		person.userName = "Inst1";
 		facade.thePerson = person;
 		facade.attachCourseToUser();
-		assertEquals("CSE870", person.GetCourseList().get(0).toString());
+		assertEquals("CSE870", person.getCourseList().get(0).toString());
 	}
 
 }

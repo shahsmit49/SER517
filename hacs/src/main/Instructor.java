@@ -12,7 +12,7 @@ public class Instructor extends Person {
 		type = Type.Instructor;// type=1 :instructor
 	}
 
-	public CourseMenu CreateCourseMenu(Course theCourse, Level theLevel) {
+	public CourseMenu createCourseMenu(Course theCourse, Level theLevel) {
 		if (theLevel == Level.HighLevel)/// 0: Highlevel defined in CourseSeletDlg.
 		{
 			theCourseMenu = new HighLevelCourseMenu();
@@ -23,8 +23,8 @@ public class Instructor extends Person {
 		return theCourseMenu;
 	}
 
-	public boolean ShowMenu() {
-		super.ShowMenu();
+	public boolean showMenu() {
+		super.showMenu();
 		showAddButton();
 		showViewButtons();
 		showComboxes();

@@ -37,6 +37,7 @@ public class ClassCourseList extends ArrayList<Course> {
 			}
 			file.close();
 		} catch (Exception ee) {
+			ee.printStackTrace();
 		}
 	}
 

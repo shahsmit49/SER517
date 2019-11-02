@@ -15,7 +15,7 @@ public class Student extends Person {
 		type = Type.Student; // type=0: student
 	}
 
-	public CourseMenu CreateCourseMenu(Course theCourse, Level theLevel) {
+	public CourseMenu createCourseMenu(Course theCourse, Level theLevel) {
 
 		if (theLevel == Level.HighLevel) // 0: Highlevel defined in CourseSelectDlg.
 		{
@@ -28,8 +28,8 @@ public class Student extends Person {
 	}
 
 	@Override
-	public boolean ShowMenu() {
-		super.ShowMenu();
+	public boolean showMenu() {
+		super.showMenu();
 		showViewButtons();
 		showComboxes();
 		showRadios();
