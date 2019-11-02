@@ -13,6 +13,8 @@ import org.junit.jupiter.api.Test;
 
 import main.Assignment;
 import main.Facade;
+import main.Instructor;
+import main.Person;
 import main.Solution;
 import main.USER_TYPE;
 import main.UserInfoItem;
@@ -109,23 +111,11 @@ class TestFacade {
 	 */
 	@Test
 	void testAttachCourseToUser() {
-		fail("Not yet implemented");
-	}
-
-	/**
-	 * Test method for {@link main.Facade#selectCourse()}.
-	 */
-	@Test
-	void testSelectCourse() {
-		fail("Not yet implemented");
-	}
-
-	/**
-	 * Test method for {@link main.Facade#courseOperation()}.
-	 */
-	@Test
-	void testCourseOperation() {
-		fail("Not yet implemented");
+		Person person = new Instructor();
+		person.UserName = "Inst1";
+		facade.thePerson = person;
+		facade.attachCourseToUser();
+		assertEquals("CSE870", person.GetCourseList().get(0).toString());
 	}
 
 }

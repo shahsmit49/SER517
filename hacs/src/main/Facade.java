@@ -131,10 +131,10 @@ public class Facade {
 	 * UserCourse.txt file match the coursename with theCouresList attach the
 	 * Matched course object to the new create user Facade.thePerson.CourseList
 	 */
-	void attachCourseToUser() {
+	public void attachCourseToUser() {
 		BufferedReader file;
 		try {
-			file = new BufferedReader(new FileReader("/hacs/src/main/UserCourse.txt"));
+			file = new BufferedReader(new FileReader("/Users/edplus/git/SER517/hacs/src/main/UserCourse.txt"));
 			String aline, strUserName, strCourseName;
 			while ((aline = file.readLine()) != null) // not the EOF
 			{
@@ -150,7 +150,7 @@ public class Facade {
 				}
 			}
 		} catch (Exception ee) {
-			;
+			ee.printStackTrace();
 		}
 	}
 
