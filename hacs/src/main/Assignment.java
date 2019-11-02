@@ -10,6 +10,12 @@ package main;
  */
 
 import java.util.*;
+
+import main.NodeVisitor;
+import main.Solution;
+import main.SolutionIterator;
+import main.SolutionList;
+
 import java.text.DateFormat;
 
 public class Assignment {

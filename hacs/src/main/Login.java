@@ -89,12 +89,14 @@ public class Login extends JDialog {
 		try {
 			if (StudentRadio.isSelected() == true)//// student
 			{
+				String userHome = System.getProperty("user.home");
 				UserType = USER_TYPE.Student; /// 0 for student
-				file = new BufferedReader(new FileReader("/hacs/src/main/StuInfo.txt"));
+				file = new BufferedReader(new FileReader("/Users/edplus/git/SER517/hacs/src/main/StuInfo.txt"));
 			} else// instructor
 			{
+				String userHome = System.getProperty("user.home");
 				UserType = USER_TYPE.Instructor; // 1 for instructor
-				file = new BufferedReader(new FileReader("/hacs/src/main/InsInfor.txt"));
+				file = new BufferedReader(new FileReader("/Users/edplus/git/SER517/hacs/src/main/InsInfor.txt"));
 			}
 			UserBox = UserNameText.getText();
 			String PasswordBox = new String(PasswordText.getPassword());
@@ -110,7 +112,7 @@ public class Login extends JDialog {
 				this.hide();
 			}
 		} catch (Exception ee) {
-			;
+			ee.printStackTrace();
 		}
 
 	}

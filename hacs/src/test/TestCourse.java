@@ -89,7 +89,7 @@ class TestCourse {
 	@Test
 	void testAccept() {
 		course.accept(new ReminderVisitor(new Reminder()));
-		assertEquals(null, null);
+		assertEquals(true, true);
 	}
 
 }

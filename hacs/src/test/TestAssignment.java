@@ -196,7 +196,7 @@ class TestAssignment {
 	@Test
 	void testAccept() {
 		assign.accept(new ReminderVisitor(new Reminder()));
-		assertEquals(null, null);
+		assertEquals(true, true);
 	}
 	
 	@Test
