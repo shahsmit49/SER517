@@ -27,6 +27,10 @@ class TestSolution {
 	@BeforeAll
 	static void setUpBeforeClass() throws Exception {
 		solution = new Solution();
+		solution.theAuthor = "Smit";
+		solution.solutionFileName = "data.txt";
+		solution.theGrade = 1;
+		solution.reported = true;
 	}
 
 	/**
@@ -55,7 +59,7 @@ class TestSolution {
 	 */
 	@Test
 	void testToString() {
-		
+		assertEquals("Smit  data.txt Grade=1  reported", solution.toString());
 	}
 
 	/**
@@ -63,7 +67,7 @@ class TestSolution {
 	 */
 	@Test
 	void testGetGradeString() {
-		fail("Not yet implemented");
+		assertEquals("1", solution.getGradeString());
 	}
 
 	/**
@@ -71,7 +75,7 @@ class TestSolution {
 	 */
 	@Test
 	void testGetGradeInt() {
-		fail("Not yet implemented");
+		assertEquals(1, solution.getGradeInt());
 	}
 
 	/**
@@ -79,7 +83,7 @@ class TestSolution {
 	 */
 	@Test
 	void testSetReported() {
-		fail("Not yet implemented");
+		assertEquals(true, solution.reported);
 	}
 
 	/**
@@ -87,7 +91,7 @@ class TestSolution {
 	 */
 	@Test
 	void testIsReported() {
-		fail("Not yet implemented");
+		assertEquals(true, solution.isReported());
 	}
 
 }

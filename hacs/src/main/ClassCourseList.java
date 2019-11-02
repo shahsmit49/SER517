@@ -28,7 +28,8 @@ public class ClassCourseList extends ArrayList<Course> {
 		try {
 			BufferedReader file;
 			String strCourseName = null;
-			file = new BufferedReader(new FileReader("/Users/edplus/git/SER517/hacs/src/main/CourseInfo.txt"));
+			String userHome = System.getProperty("user.home");
+			file = new BufferedReader(new FileReader(userHome+"/git/SER517/hacs/src/main/CourseInfo.txt"));
 			while ((strCourseName = file.readLine()) != null) {
 				Course theCourse;
 				theCourse = new Course(strCourseName, Level.LowLevel);

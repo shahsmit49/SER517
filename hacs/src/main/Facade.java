@@ -51,7 +51,7 @@ public class Facade {
 			theAssignmentMenu = new InstructorAssignmentMenu();
 		}
 		Assignment theAssignment = new Assignment();
-		theAssignmentMenu.ShowMenu(theAssignment, thePerson);
+		theAssignmentMenu.showMenu(theAssignment, thePerson);
 		theCourse.addAssignment(theAssignment);
 	}
 
@@ -71,7 +71,7 @@ public class Facade {
 			theAssignmentMenu = new InstructorAssignmentMenu();
 		}
 
-		theAssignmentMenu.ShowMenu(theAssignment, thePerson);
+		theAssignmentMenu.showMenu(theAssignment, thePerson);
 	}
 
 //functions for InstructorAssignmentMenu
@@ -81,7 +81,7 @@ public class Facade {
 
 	void gradeSolution(Solution theSolution) {
 		SolutionMenu solutionMenu = new SolutionMenu();
-		solutionMenu.ShowMenu(theSolution);
+		solutionMenu.showMenu(theSolution);
 	}
 
 	public void reportSolutions(Assignment theAssignment) {
@@ -134,7 +134,8 @@ public class Facade {
 	public void attachCourseToUser() {
 		BufferedReader file;
 		try {
-			file = new BufferedReader(new FileReader("/Users/edplus/git/SER517/hacs/src/main/UserCourse.txt"));
+			String userHome = System.getProperty("user.home");
+			file = new BufferedReader(new FileReader(userHome+"/git/SER517/hacs/src/main/UserCourse.txt"));
 			String aline, strUserName, strCourseName;
 			while ((aline = file.readLine()) != null) // not the EOF
 			{

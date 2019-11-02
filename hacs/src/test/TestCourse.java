@@ -61,7 +61,7 @@ class TestCourse {
 	void testCourse() {
 		Course course = new Course("algo", Level.HighLevel);
 		assertEquals("algo", course.courseName);
-		assertEquals(0, course.courseLevel);
+		assertEquals(Level.HighLevel, course.courseLevel);
 	}
 
 	/**

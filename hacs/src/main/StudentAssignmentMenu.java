@@ -1,11 +1,12 @@
 package main;
 
-import javax.swing.*;
+import java.awt.Rectangle;
+import java.awt.event.ActionEvent;
+import java.util.Date;
 
-import java.awt.*;
-import java.awt.event.*;
-import java.io.*;
-import java.util.*;
+import javax.swing.JButton;
+import javax.swing.JLabel;
+import javax.swing.JTextField;
 
 /**
  * Title: HACS Description: Copyright: Copyright (c) 2002 Company: msu
@@ -16,7 +17,11 @@ import java.util.*;
 
 public class StudentAssignmentMenu extends AssignmentMenu {
 
-////  class AssignmentMenu
+/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	////  class AssignmentMenu
 	private boolean boolSubmit = false;
 	private Solution theSolution;
 	private Assignment theAssignment;
@@ -97,7 +102,7 @@ public class StudentAssignmentMenu extends AssignmentMenu {
 	 * check if the student has already had a solution or not. if not , create a new
 	 * solution for the student. after showing the solution attatch the soluiton;
 	 */
-	public void ShowMenu(Assignment assignment, Person thePerson) {
+	public void showMenu(Assignment assignment, Person thePerson) {
 		theAssignment = assignment;
 		SolutionIterator theIter = theAssignment.getSolutionIterator();
 		theSolution = (Solution) theIter.next(thePerson.userName);
@@ -114,7 +119,7 @@ public class StudentAssignmentMenu extends AssignmentMenu {
 		lDueDate.setText(theAssignment.dueDate.toString());
 		lSuggestedSolution.setText(theAssignment.suggestSolution.solutionFileName);
 
-		show();
+		setVisible(true);
 
 		if (boolSubmit == true) {
 			if (theSolution == null) {
@@ -129,12 +134,12 @@ public class StudentAssignmentMenu extends AssignmentMenu {
 
 	void bSubmit_actionPerformed(ActionEvent e) {
 		boolSubmit = true;
-		hide();
+		setVisible(false);
 	}
 
 	void bCancel_actionPerformed(ActionEvent e) {
 		boolSubmit = false;
-		hide();
+		setVisible(false);
 	}
 
 }

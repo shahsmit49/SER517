@@ -1,9 +1,6 @@
 package main;
 
-import javax.swing.*;
-import java.awt.*;
-import java.awt.event.*;
-import java.io.*;
+import javax.swing.JDialog;
 
 /**
  * Title: HACS Description: Copyright: Copyright (c) 2002 Company: msu
@@ -19,11 +16,16 @@ import java.io.*;
 
 public class SolutionMenu extends JDialog {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
 	public SolutionMenu() {
 	}
 
-	void ShowMenu(Solution theSolution) {
-		show();
+	void showMenu(Solution theSolution) {
+		setVisible(true);
 	}
 	
 }

@@ -44,7 +44,7 @@ public class Solution {
 			return "-1";
 	}
 
-	int getGradeInt() {
+	public int getGradeInt() {
 		return theGrade;
 	}
 
