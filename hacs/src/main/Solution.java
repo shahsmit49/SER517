@@ -17,7 +17,7 @@ import java.util.*;
 
 public class Solution {
 	public String theAuthor = "";
-	public String SolutionFileName = "";
+	public String solutionFileName = "";
 	public Date theSubmitData = new Date();
 	public int theGrade;
 	public boolean reported = false;
@@ -28,7 +28,7 @@ public class Solution {
 	@Override
 	public String toString() {
 		String string;
-		string = theAuthor + "  " + SolutionFileName + " Grade=" + getGradeInt() + "  ";
+		string = theAuthor + "  " + solutionFileName + " Grade=" + getGradeInt() + "  ";
 		if (isReported())
 			string += "reported";
 		else
@@ -37,7 +37,7 @@ public class Solution {
 		return (string);
 	}
 
-	String getGradeString() {
+	public String getGradeString() {
 		if (isReported())
 			return "" + theGrade;
 		else
